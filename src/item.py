@@ -9,7 +9,7 @@ class Item:
         self.quantity = quantity
         Item.all.append(self)
 
-    def calculate_total_price(self) -> float:
+    def calculate_total_price(self):
         total_price = self.price * self.quantity
 
         return total_price

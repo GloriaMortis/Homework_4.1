@@ -1,4 +1,4 @@
-class Item:
+class Test_Item:
 
     pay_rate = 1.0
     all = []
@@ -7,14 +7,22 @@ class Item:
         self.name = name
         self.price = price
         self.quantity = quantity
-        Item.all.append(self)
+        Test_Item.all.append(self)
 
-    def calculate_total_price(self) -> float:
+    def test_calculate_total_price(self) -> float:
         total_price = self.price * self.quantity
 
         return total_price
 
-    def apply_discount(self):
+    def test_apply_discount(self):
         self.price = self.price * self.pay_rate
 
         return self.price
+
+
+if __name__ == '__main__':
+    item1 = Test_Item("apple", 100000, 4)
+
+    assert item1.test_calculate_total_price()
+
+    assert item1.test_apply_discount()

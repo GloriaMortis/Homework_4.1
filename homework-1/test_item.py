@@ -23,6 +23,9 @@ class Test_Item:
 if __name__ == '__main__':
     item1 = Test_Item("apple", 100000, 4)
 
+    #test 1
     assert item1.test_calculate_total_price()
 
+    #test 2
     assert item1.test_apply_discount()
+
